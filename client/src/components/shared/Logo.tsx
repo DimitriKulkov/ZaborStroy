@@ -21,7 +21,7 @@ export function Logo({ textColor }: LogoProps) {
       </svg>
       <div>
         <h1 className={`text-xl font-bold ${textColor === 'primary' ? 'text-primary' : 'text-white'}`}>ZaborStroy</h1>
-        <p className={`text-xs ${textColor === 'primary' ? 'text-[#666666]' : 'text-white'}`}>Заборы и ворота в Воронеже</p>
+        <p className={`text-xs ${textColor === 'primary' ? 'text-[#666666]' : 'text-white'}`}>Заборы и ворота в Москве</p>
       </div>
     </div>
   );
