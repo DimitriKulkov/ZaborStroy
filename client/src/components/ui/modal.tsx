@@ -78,7 +78,10 @@ export function CallbackModal({ isOpen, onClose, onSuccess }: CallbackModalProps
   async function onSubmit(data: CallbackFormValues) {
     setIsSubmitting(true);
     try {
-      await apiRequest("POST", "/api/callback", data);
+      await apiRequest("POST", "/api/callback", {
+        ...data,
+        targetEmail: "zaborstroy68@yandex.ru"
+      });
       form.reset();
       onSuccess("Спасибо за заявку! Наш менеджер свяжется с вами в течение 30 минут.");
     } catch (error) {
@@ -168,7 +171,10 @@ export function MeasurementModal({ isOpen, onClose, onSuccess }: MeasurementModa
   async function onSubmit(data: MeasurementFormValues) {
     setIsSubmitting(true);
     try {
-      await apiRequest("POST", "/api/measurement", data);
+      await apiRequest("POST", "/api/measurement", {
+        ...data,
+        targetEmail: "zaborstroy68@yandex.ru"
+      });
       form.reset();
       onSuccess("Спасибо за заявку! Наш замерщик свяжется с вами для уточнения деталей.");
     } catch (error) {
@@ -292,7 +298,10 @@ export function CalculationModal({ isOpen, onClose, onSuccess }: CalculationModa
   async function onSubmit(data: CalculationFormValues) {
     setIsSubmitting(true);
     try {
-      await apiRequest("POST", "/api/contact", data);
+      await apiRequest("POST", "/api/contact", {
+        ...data,
+        targetEmail: "zaborstroy68@yandex.ru"
+      });
       form.reset();
       onSuccess("Спасибо за заявку! Мы рассчитаем стоимость и свяжемся с вами в течение дня.");
     } catch (error) {
@@ -564,7 +573,8 @@ export function ReviewModal({ isOpen, onClose, onSuccess }: ReviewModalProps) {
     try {
       await apiRequest("POST", "/api/review", {
         ...data,
-        rating: rating // Use the rating from state
+        rating: rating, // Use the rating from state
+        targetEmail: "zaborstroy68@yandex.ru"
       });
       form.reset();
       onSuccess("Спасибо за ваш отзыв! Он будет опубликован после модерации.");
