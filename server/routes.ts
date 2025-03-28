@@ -26,6 +26,13 @@ const contactFormSchema = z.object({
   comment: z.string().optional(),
 });
 
+const questionSchema = z.object({
+  name: z.string().min(2),
+  email: z.string().email(),
+  question: z.string().min(10),
+  targetEmail: z.string().email(),
+});
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Callback request form
   app.post("/api/callback", async (req, res) => {
@@ -76,6 +83,37 @@ export async function registerRoutes(app: Express): Promise<Server> {
         data: JSON.stringify(data),
         createdAt: new Date(),
       });
+      res.status(201).json(submission);
+    } catch (error) {
+      if (error instanceof ZodError) {
+        const validationError = fromZodError(error);
+        res.status(400).json({ message: validationError.message });
+      } else {
+        res.status(500).json({ message: "Internal server error" });
+      }
+    }
+  });
+
+  // Question form
+  app.post("/api/question", async (req, res) => {
+    try {
+      const data = questionSchema.parse(req.body);
+      
+      // Store the question in the database
+      const submission = await storage.createFormSubmission({
+        type: "question",
+        data: JSON.stringify(data),
+        createdAt: new Date(),
+      });
+      
+      // Here we would typically send an email to the target email address
+      // For demonstration purposes, we'll just log the data
+      console.log(`Question submitted to ${data.targetEmail}:`, {
+        name: data.name,
+        email: data.email,
+        question: data.question
+      });
+      
       res.status(201).json(submission);
     } catch (error) {
       if (error instanceof ZodError) {

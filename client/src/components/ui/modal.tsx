@@ -40,6 +40,13 @@ const calculationFormSchema = z.object({
   comment: z.string().optional().or(z.literal("")),
 });
 
+// Question Form Schema
+const questionFormSchema = z.object({
+  name: z.string().min(2, "Имя должно содержать не менее 2 символов"),
+  email: z.string().email("Введите корректный email"),
+  question: z.string().min(10, "Вопрос должен содержать не менее 10 символов"),
+});
+
 // Callback Modal
 interface CallbackModalProps {
   isOpen: boolean;
@@ -400,6 +407,119 @@ export function CalculationModal({ isOpen, onClose, onSuccess }: CalculationModa
               className="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-opacity-90 transition-all"
             >
               {isSubmitting ? "Отправка..." : "Рассчитать стоимость"}
+            </Button>
+          </form>
+        </Form>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+// Question Modal
+interface QuestionModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onSuccess: (message: string) => void;
+}
+
+export function QuestionModal({ isOpen, onClose, onSuccess }: QuestionModalProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  type QuestionFormValues = z.infer<typeof questionFormSchema>;
+  
+  const form = useForm<QuestionFormValues>({
+    resolver: zodResolver(questionFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      question: "",
+    },
+  });
+
+  async function onSubmit(data: QuestionFormValues) {
+    setIsSubmitting(true);
+    try {
+      // Include the target email in the request
+      await apiRequest("POST", "/api/question", {
+        ...data,
+        targetEmail: "zaborstroy68@yandex.ru"
+      });
+      form.reset();
+      onSuccess("Спасибо за ваш вопрос! Мы ответим на него в ближайшее время.");
+    } catch (error) {
+      console.error("Error submitting question form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="bg-white rounded-lg p-8 max-w-md w-full">
+        <DialogHeader>
+          <DialogTitle className="text-xl font-bold text-primary">Задать вопрос</DialogTitle>
+          <DialogDescription className="text-[#666666] mt-2">
+            Заполните форму, и мы ответим на ваш вопрос по электронной почте
+          </DialogDescription>
+        </DialogHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="font-bold">Ваше имя*</FormLabel>
+                  <FormControl>
+                    <Input 
+                      {...field} 
+                      className="w-full p-3 border border-[#D3D3D3] rounded-lg focus:outline-none focus:border-primary" 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="font-bold">Email*</FormLabel>
+                  <FormControl>
+                    <Input 
+                      {...field} 
+                      type="email"
+                      className="w-full p-3 border border-[#D3D3D3] rounded-lg focus:outline-none focus:border-primary" 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="question"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="font-bold">Ваш вопрос*</FormLabel>
+                  <FormControl>
+                    <Textarea 
+                      {...field} 
+                      placeholder="Напишите ваш вопрос здесь..."
+                      className="w-full p-3 border border-[#D3D3D3] rounded-lg focus:outline-none focus:border-primary min-h-[100px]" 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button 
+              type="submit" 
+              disabled={isSubmitting}
+              className="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-opacity-90 transition-all"
+            >
+              {isSubmitting ? "Отправка..." : "Отправить вопрос"}
             </Button>
           </form>
         </Form>
