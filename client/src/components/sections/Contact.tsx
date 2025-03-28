@@ -91,9 +91,8 @@ export function Contact() {
                     <i className="ri-time-line text-xl text-primary mr-4 mt-1"></i>
                     <div>
                       <p className="font-bold">Режим работы:</p>
-                      <p>Пн-Пт: 9:00 - 18:00</p>
-                      <p>Сб: 10:00 - 15:00</p>
-                      <p>Вс: выходной</p>
+                      <p>Прием заявок: Пн-Вс: 9:00 - 18:00</p>
+                      <p>Выезд на объекты: Пн-Вс (без выходных)</p>
                     </div>
                   </div>
                 </div>
