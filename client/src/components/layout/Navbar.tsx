@@ -34,7 +34,7 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
         
         <div className="hidden md:block">
           <div className="flex flex-col items-end">
-            <a href="tel:+78953720542" className="font-bold text-primary hover:underline">+7 (895) 372-05-42</a>
+            <a href="#contact" className="font-bold text-primary hover:underline">+7 (895) 372-05-42</a>
             <button 
               className="text-sm text-primary hover:underline"
               onClick={onOpenCallback}
@@ -62,7 +62,7 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
             <a href="#reviews" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Отзывы</a>
             <a href="#faq" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>FAQ</a>
             <a href="#contact" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Контакты</a>
-            <a href="tel:+78953720542" className="py-2 font-bold text-primary">+7 (895) 372-05-42</a>
+            <a href="#contact" className="py-2 font-bold text-primary" onClick={closeMobileMenu}>+7 (895) 372-05-42</a>
             <button 
               className="text-sm text-primary hover:underline text-left py-2"
               onClick={() => {
