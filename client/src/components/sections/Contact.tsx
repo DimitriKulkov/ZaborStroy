@@ -102,10 +102,6 @@ export function Contact() {
               <div>
                 <h3 className="text-xl font-bold text-primary mb-4">Мы в социальных сетях</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
-                    <i className="ri-vk-fill"></i>
-                  </a>
-                  
                   <Popover>
                     <PopoverTrigger asChild>
                       <button className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
@@ -173,10 +169,6 @@ export function Contact() {
                       </div>
                     </PopoverContent>
                   </Popover>
-                  
-                  <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
-                    <i className="ri-instagram-fill"></i>
-                  </a>
                 </div>
               </div>
             </div>
