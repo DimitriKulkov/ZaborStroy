@@ -9,7 +9,7 @@ import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 import { Cta } from "@/components/sections/Cta";
 import { useState } from "react";
-import { CallbackModal, MeasurementModal, CalculationModal, QuestionModal, SuccessModal } from "@/components/ui/modal";
+import { CallbackModal, MeasurementModal, CalculationModal, QuestionModal, ReviewModal, SuccessModal } from "@/components/ui/modal";
 
 export default function Home() {
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -65,6 +65,11 @@ export default function Home() {
       />
       <QuestionModal 
         isOpen={activeModal === "contact"} 
+        onClose={closeModal} 
+        onSuccess={showSuccess} 
+      />
+      <ReviewModal 
+        isOpen={activeModal === "review"} 
         onClose={closeModal} 
         onSuccess={showSuccess} 
       />

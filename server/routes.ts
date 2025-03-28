@@ -33,6 +33,13 @@ const questionSchema = z.object({
   targetEmail: z.string().email(),
 });
 
+const reviewSchema = z.object({
+  name: z.string().min(2),
+  rating: z.number().min(1).max(5),
+  text: z.string().min(10),
+  location: z.string().min(2),
+});
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Callback request form
   app.post("/api/callback", async (req, res) => {
@@ -112,6 +119,37 @@ export async function registerRoutes(app: Express): Promise<Server> {
         name: data.name,
         email: data.email,
         question: data.question
+      });
+      
+      res.status(201).json(submission);
+    } catch (error) {
+      if (error instanceof ZodError) {
+        const validationError = fromZodError(error);
+        res.status(400).json({ message: validationError.message });
+      } else {
+        res.status(500).json({ message: "Internal server error" });
+      }
+    }
+  });
+
+  // Review form
+  app.post("/api/review", async (req, res) => {
+    try {
+      const data = reviewSchema.parse(req.body);
+      
+      // Store the review in the database
+      const submission = await storage.createFormSubmission({
+        type: "review",
+        data: JSON.stringify(data),
+        createdAt: new Date(),
+      });
+      
+      // Here we would typically process the review, perhaps send a notification email
+      console.log("New review submitted:", {
+        name: data.name,
+        rating: data.rating,
+        text: data.text,
+        location: data.location
       });
       
       res.status(201).json(submission);
