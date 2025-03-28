@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { contactFormSchema } from "@/lib/data";
 
 type FormData = z.infer<typeof contactFormSchema>;
@@ -104,12 +105,75 @@ export function Contact() {
                   <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
                     <i className="ri-vk-fill"></i>
                   </a>
-                  <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
-                    <i className="ri-telegram-fill"></i>
-                  </a>
-                  <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
-                    <i className="ri-whatsapp-fill"></i>
-                  </a>
+                  
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <button className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
+                        <i className="ri-telegram-fill"></i>
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-56 p-3">
+                      <h4 className="text-sm font-semibold mb-2">Выберите номер для Telegram:</h4>
+                      <div className="space-y-2">
+                        <a 
+                          href="https://t.me/+78953720542" 
+                          target="_blank"
+                          className="block text-sm p-2 hover:bg-gray-100 rounded-md transition-colors"
+                        >
+                          +7 (895) 372-05-42
+                        </a>
+                        <a 
+                          href="https://t.me/+78902939666" 
+                          target="_blank"
+                          className="block text-sm p-2 hover:bg-gray-100 rounded-md transition-colors"
+                        >
+                          +7 (890) 293-96-66
+                        </a>
+                        <a 
+                          href="https://t.me/+78915869282" 
+                          target="_blank"
+                          className="block text-sm p-2 hover:bg-gray-100 rounded-md transition-colors"
+                        >
+                          +7 (891) 586-92-82
+                        </a>
+                      </div>
+                    </PopoverContent>
+                  </Popover>
+                  
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <button className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
+                        <i className="ri-whatsapp-fill"></i>
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-56 p-3">
+                      <h4 className="text-sm font-semibold mb-2">Выберите номер для WhatsApp:</h4>
+                      <div className="space-y-2">
+                        <a 
+                          href="https://wa.me/78953720542" 
+                          target="_blank"
+                          className="block text-sm p-2 hover:bg-gray-100 rounded-md transition-colors"
+                        >
+                          +7 (895) 372-05-42
+                        </a>
+                        <a 
+                          href="https://wa.me/78902939666" 
+                          target="_blank"
+                          className="block text-sm p-2 hover:bg-gray-100 rounded-md transition-colors"
+                        >
+                          +7 (890) 293-96-66
+                        </a>
+                        <a 
+                          href="https://wa.me/78915869282" 
+                          target="_blank"
+                          className="block text-sm p-2 hover:bg-gray-100 rounded-md transition-colors"
+                        >
+                          +7 (891) 586-92-82
+                        </a>
+                      </div>
+                    </PopoverContent>
+                  </Popover>
+                  
                   <a href="#" className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
                     <i className="ri-instagram-fill"></i>
                   </a>
