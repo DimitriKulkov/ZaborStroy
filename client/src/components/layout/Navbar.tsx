@@ -32,6 +32,7 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
             <div className="absolute z-50 left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48 invisible group-hover:visible">
               <a href="#installation-steps" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">Установка заборов</a>
               <a href="#awning-installation-steps" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">Установка навесов</a>
+              <a href="#gate-installation-steps" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">Установка ворот</a>
             </div>
           </div>
           <a href="#prices" className="hover:text-primary transition-colors">Цены</a>
@@ -82,6 +83,13 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
                   onClick={closeMobileMenu}
                 >
                   Установка навесов
+                </a>
+                <a 
+                  href="#gate-installation-steps" 
+                  className="block py-1.5 hover:text-primary transition-colors" 
+                  onClick={closeMobileMenu}
+                >
+                  Установка ворот
                 </a>
               </div>
             </div>

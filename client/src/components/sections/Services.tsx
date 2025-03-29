@@ -2,6 +2,7 @@ import { ServiceCard } from "@/components/shared/ServiceCard";
 import { fences, canopies, gates } from "@/lib/data";
 import { InstallationSteps } from "./InstallationSteps";
 import { AwningInstallationSteps } from "./AwningInstallationSteps";
+import { GateInstallationSteps } from "./GateInstallationSteps";
 
 export function Services() {
   return (
@@ -52,7 +53,7 @@ export function Services() {
         {/* Awning Installation Steps */}
         <AwningInstallationSteps className="mb-16 py-0" />
         
-        <div>
+        <div className="mb-16">
           <h3 className="text-2xl font-bold text-primary mb-8 text-center">Ворота</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {gates.map((gate) => (
@@ -67,6 +68,9 @@ export function Services() {
             ))}
           </div>
         </div>
+
+        {/* Gate Installation Steps */}
+        <GateInstallationSteps className="mb-16 py-0" />
       </div>
     </section>
   );
