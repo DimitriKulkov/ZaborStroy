@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import chainLinkFence from "../assets/chain-link-fence.svg";
+import chainLinkFencePhoto from "../assets/chain-link-fence-photo.png";
 
 // Services data
 export const fences = [
@@ -9,7 +9,7 @@ export const fences = [
     title: "Сетка-рабица",
     description: "Экономичное решение с быстрой установкой, идеально для ограждения больших территорий.",
     price: "от 900 руб/пм",
-    image: chainLinkFence
+    image: chainLinkFencePhoto
   },
   {
     id: "corrugated",
@@ -157,7 +157,7 @@ export const portfolioItems = [
     description: "Навес из металлочерепицы для автомобиля размером 5x3 метра. Материал: металлочерепица с полимерным покрытием."
   },
   {
-    image: "https://images.unsplash.com/photo-1570051008600-befe9c2d0512?ixlib=rb-1.2.1&auto=format&fit=crop&q=80",
+    image: chainLinkFencePhoto,
     title: "Забор из сетки-рабицы",
     location: "г. Москва",
     description: "Забор из сетки-рабицы высотой 1.5 метра. Материал: оцинкованная сетка-рабица."
