@@ -25,6 +25,7 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
         
         <div className="hidden md:flex items-center space-x-6">
           <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
+          <a href="#installation-steps" className="hover:text-primary transition-colors">Этапы работ</a>
           <a href="#prices" className="hover:text-primary transition-colors">Цены</a>
           <a href="#portfolio" className="hover:text-primary transition-colors">Наши работы</a>
           <a href="#reviews" className="hover:text-primary transition-colors">Отзывы</a>
@@ -57,6 +58,7 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
         <div className="md:hidden bg-white px-4 pt-2 pb-4 border-t border-[#D3D3D3]">
           <div className="flex flex-col space-y-3">
             <a href="#services" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Услуги</a>
+            <a href="#installation-steps" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Этапы работ</a>
             <a href="#prices" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Цены</a>
             <a href="#portfolio" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Наши работы</a>
             <a href="#reviews" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Отзывы</a>

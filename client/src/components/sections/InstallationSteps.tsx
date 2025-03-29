@@ -10,7 +10,7 @@ export function InstallationSteps({ className }: InstallationStepsProps) {
     <section id="installation-steps" className={`py-16 ${className || ""}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Этапы работ по установке забора</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">Этапы работ по установке забора</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
             Наша команда профессионалов выполняет установку заборов по отработанной технологии,
             гарантирующей высокое качество и долговечность конструкции.
