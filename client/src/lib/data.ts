@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import chainLinkFencePhoto from "../assets/chain-link-fence-photo.png";
+import corrugatedFencePhoto from "../assets/corrugated-fence-photo.png";
 
 // Services data
 export const fences = [
@@ -16,7 +17,7 @@ export const fences = [
     title: "Профнастил",
     description: "Долговечное и надежное ограждение с защитой от ветра и посторонних глаз.",
     price: "от 2 000 руб/пм",
-    image: "https://images.unsplash.com/photo-1627224137248-a0dc96e5e2dc?ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
+    image: corrugatedFencePhoto
   },
   {
     id: "euro-picket",
@@ -121,7 +122,7 @@ export const prices = [
 // Portfolio items
 export const portfolioItems = [
   {
-    image: "https://images.unsplash.com/photo-1566763481645-ecdf2ff9f2b5?ixlib=rb-1.2.1&auto=format&fit=crop&q=80",
+    image: corrugatedFencePhoto,
     title: "Забор из профнастила",
     location: "г. Москва",
     description: "Забор из профнастила высотой 2 метра с откатными воротами. Материал: оцинкованный профнастил с полимерным покрытием."
