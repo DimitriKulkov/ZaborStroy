@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#E6F0E6"/>
+  
+  <!-- Ground/Grass -->
+  <rect y="350" width="600" height="50" fill="#8B6C3D"/>
+  <path d="M0 350 L600 350 L600 360 Q300 345 0 360 Z" fill="#4C8141"/>
+  
+  <!-- Fence Posts -->
+  <rect x="50" y="120" width="15" height="230" fill="#6E6E6E"/>
+  <rect x="200" y="120" width="15" height="230" fill="#6E6E6E"/>
+  <rect x="350" y="120" width="15" height="230" fill="#6E6E6E"/>
+  <rect x="500" y="120" width="15" height="230" fill="#6E6E6E"/>
+  
+  <!-- Post Caps -->
+  <rect x="45" y="115" width="25" height="10" rx="3" fill="#4A4A4A"/>
+  <rect x="195" y="115" width="25" height="10" rx="3" fill="#4A4A4A"/>
+  <rect x="345" y="115" width="25" height="10" rx="3" fill="#4A4A4A"/>
+  <rect x="495" y="115" width="25" height="10" rx="3" fill="#4A4A4A"/>
+  
+  <!-- Chain Link Pattern -->
+  <!-- Horizontal Lines -->
+  <path d="M50 150 H565" stroke="#9E9E9E" stroke-width="2"/>
+  <path d="M50 180 H565" stroke="#9E9E9E" stroke-width="2"/>
+  <path d="M50 210 H565" stroke="#9E9E9E" stroke-width="2"/>
+  <path d="M50 240 H565" stroke="#9E9E9E" stroke-width="2"/>
+  <path d="M50 270 H565" stroke="#9E9E9E" stroke-width="2"/>
+  <path d="M50 300 H565" stroke="#9E9E9E" stroke-width="2"/>
+  <path d="M50 330 H565" stroke="#9E9E9E" stroke-width="2"/>
+  
+  <!-- Diagonal Lines for Chain Link Pattern - First Section -->
+  <g opacity="0.9">
+    <!-- Left Section -->
+    <path d="M50 150 L65 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M65 150 L80 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M80 150 L95 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M95 150 L110 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M110 150 L125 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M125 150 L140 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M140 150 L155 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M155 150 L170 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M170 150 L185 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M185 150 L200 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    
+    <!-- Reverse Diagonals -->
+    <path d="M50 180 L65 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M65 180 L80 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M80 180 L95 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M95 180 L110 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M110 180 L125 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M125 180 L140 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M140 180 L155 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M155 180 L170 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M170 180 L185 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M185 180 L200 150" stroke="#9E9E9E" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Center Section -->
+  <g opacity="0.9">
+    <path d="M200 150 L215 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M215 150 L230 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M230 150 L245 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M245 150 L260 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M260 150 L275 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M275 150 L290 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M290 150 L305 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M305 150 L320 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M320 150 L335 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M335 150 L350 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    
+    <!-- Reverse Diagonals -->
+    <path d="M200 180 L215 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M215 180 L230 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M230 180 L245 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M245 180 L260 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M260 180 L275 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M275 180 L290 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M290 180 L305 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M305 180 L320 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M320 180 L335 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M335 180 L350 150" stroke="#9E9E9E" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Right Section -->
+  <g opacity="0.9">
+    <path d="M350 150 L365 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M365 150 L380 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M380 150 L395 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M395 150 L410 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M410 150 L425 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M425 150 L440 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M440 150 L455 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M455 150 L470 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M470 150 L485 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M485 150 L500 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    
+    <!-- Reverse Diagonals -->
+    <path d="M350 180 L365 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M365 180 L380 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M380 180 L395 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M395 180 L410 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M410 180 L425 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M425 180 L440 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M440 180 L455 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M455 180 L470 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M470 180 L485 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M485 180 L500 150" stroke="#9E9E9E" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Far Right Section -->
+  <g opacity="0.9">
+    <path d="M500 150 L515 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M515 150 L530 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M530 150 L545 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M545 150 L560 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    
+    <!-- Reverse Diagonals -->
+    <path d="M500 180 L515 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M515 180 L530 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M530 180 L545 150" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M545 180 L560 150" stroke="#9E9E9E" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Repeat pattern for next rows (simplified for brevity) -->
+  <!-- Row 2 -->
+  <g opacity="0.9">
+    <path d="M50 180 L65 210" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M65 180 L80 210" stroke="#9E9E9E" stroke-width="1.5"/>
+    <!-- More diagonals would be repeated here for the full fence -->
+    
+    <!-- Reverse Diagonals -->
+    <path d="M50 210 L65 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <path d="M65 210 L80 180" stroke="#9E9E9E" stroke-width="1.5"/>
+    <!-- More reverse diagonals would be repeated here -->
+  </g>
+  
+  <!-- Trees/Bushes in Background -->
+  <circle cx="100" cy="80" r="30" fill="#2E563B"/>
+  <circle cx="500" cy="90" r="25" fill="#2E563B"/>
+  
+  <!-- Decorative Clouds -->
+  <ellipse cx="150" cy="40" rx="40" ry="15" fill="#FFFFFF"/>
+  <ellipse cx="400" cy="30" rx="35" ry="12" fill="#FFFFFF"/>
+  
+  <!-- Sun -->
+  <circle cx="50" cy="50" r="25" fill="#FFDB58"/>
+  <circle cx="50" cy="50" r="20" fill="#FFEB8D"/>
+</svg>

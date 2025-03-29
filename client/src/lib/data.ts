@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import chainLinkFence from "../assets/chain-link-fence.svg";
+
 // Services data
 export const fences = [
   {
@@ -7,7 +9,7 @@ export const fences = [
     title: "Сетка-рабица",
     description: "Экономичное решение с быстрой установкой, идеально для ограждения больших территорий.",
     price: "от 900 руб/пм",
-    image: "https://images.unsplash.com/photo-1558467523-32456dc1a528?ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
+    image: chainLinkFence
   },
   {
     id: "corrugated",
