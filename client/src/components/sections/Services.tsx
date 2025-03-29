@@ -1,6 +1,7 @@
 import { ServiceCard } from "@/components/shared/ServiceCard";
 import { fences, canopies, gates } from "@/lib/data";
 import { InstallationSteps } from "./InstallationSteps";
+import { AwningInstallationSteps } from "./AwningInstallationSteps";
 
 export function Services() {
   return (
@@ -29,7 +30,7 @@ export function Services() {
           </div>
         </div>
         
-        {/* Installation Steps */}
+        {/* Fence Installation Steps */}
         <InstallationSteps className="mb-16 py-0" />
         
         <div className="mb-16">
@@ -47,6 +48,9 @@ export function Services() {
             ))}
           </div>
         </div>
+
+        {/* Awning Installation Steps */}
+        <AwningInstallationSteps className="mb-16 py-0" />
         
         <div>
           <h3 className="text-2xl font-bold text-primary mb-8 text-center">Ворота</h3>

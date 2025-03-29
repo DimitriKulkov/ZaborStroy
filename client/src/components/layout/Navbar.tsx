@@ -25,7 +25,15 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
         
         <div className="hidden md:flex items-center space-x-6">
           <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
-          <a href="#installation-steps" className="hover:text-primary transition-colors">Этапы работ</a>
+          <div className="relative group">
+            <button className="hover:text-primary transition-colors flex items-center">
+              Этапы работ <span className="ml-1">▼</span>
+            </button>
+            <div className="absolute z-50 left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48 invisible group-hover:visible">
+              <a href="#installation-steps" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">Установка заборов</a>
+              <a href="#awning-installation-steps" className="block px-4 py-2 hover:bg-primary/10 hover:text-primary">Установка навесов</a>
+            </div>
+          </div>
           <a href="#prices" className="hover:text-primary transition-colors">Цены</a>
           <a href="#portfolio" className="hover:text-primary transition-colors">Наши работы</a>
           <a href="#reviews" className="hover:text-primary transition-colors">Отзывы</a>
@@ -58,7 +66,25 @@ export function Navbar({ onOpenCallback }: NavbarProps) {
         <div className="md:hidden bg-white px-4 pt-2 pb-4 border-t border-[#D3D3D3]">
           <div className="flex flex-col space-y-3">
             <a href="#services" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Услуги</a>
-            <a href="#installation-steps" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Этапы работ</a>
+            <div className="py-2">
+              <div className="font-medium">Этапы работ:</div>
+              <div className="pl-4 mt-1 border-l-2 border-primary/20">
+                <a 
+                  href="#installation-steps" 
+                  className="block py-1.5 hover:text-primary transition-colors" 
+                  onClick={closeMobileMenu}
+                >
+                  Установка заборов
+                </a>
+                <a 
+                  href="#awning-installation-steps" 
+                  className="block py-1.5 hover:text-primary transition-colors" 
+                  onClick={closeMobileMenu}
+                >
+                  Установка навесов
+                </a>
+              </div>
+            </div>
             <a href="#prices" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Цены</a>
             <a href="#portfolio" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Наши работы</a>
             <a href="#reviews" className="py-2 hover:text-primary transition-colors" onClick={closeMobileMenu}>Отзывы</a>
